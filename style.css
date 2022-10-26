@@ -1,0 +1,19 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+h1 {
+  color: rgb(67, 67, 67);
+  font-family: Arial;
+  font-style: bold;
+  font-size: 32px;
+}
+h2 {
+  font-family: Arial;
+  font-style: bold;
+  font-size: 20px;
+}
+p {
+  color: rgb(67, 67, 67);
+  font-family: Arial;
+  font-size: 16px;
+}
