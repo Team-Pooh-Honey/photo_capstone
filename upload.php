@@ -6,6 +6,7 @@
 ?>
     
     <link rel="stylesheet" href="style.css">
+    
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
         crossorigin="anonymous"></script>
@@ -18,8 +19,8 @@
                 text-align: left;   
                 padding: 60px;
                 margin-top: 100px;
-                margin-left: 500px;
-                margin-right: 500px;
+                margin-left: auto;
+                margin-right: auto;
                 border-color: #A49F9F;
                 background-color: #dddddd;
         }
