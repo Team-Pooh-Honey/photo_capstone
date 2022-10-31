@@ -6,7 +6,7 @@
 ?>
     
     <link rel="stylesheet" href="style.css">
-    
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
         crossorigin="anonymous"></script>
@@ -27,29 +27,32 @@
         </style>
 
         <h2>Upload your images!</h2>
-        <form action="/upload.php" method="get">
+
         <p>IMAGE NAME</p>
         <input type="text" id="name" name="name" placeholder="Image 01"></input>
+
         <p>AUTHOR</p>
         <input type="text" id="author" name="author" placeholder="Jane Jill"></input>
+
         <p>DATE</p>
         <input type="date" id="date" name="date" placeholder="Date taken"></input>
         <div id="editor"></div>
-        <button id="submit"></input>
+
+        <p>DESCRIPTION</p>
+        <textarea type="text" id="description" name="description" placeholder="Describe your Image!" rows="6" cols="50"></textarea>
+
+        <form action="/upload.php" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file">
+
+        <button type="submit" name="SUBMIT">SUBMIT</button>
+        <action="submit-photo.php" method="POST">
+
 
         <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
         <script>
             var editor = ace.edit("editor");
             editor.session.setMode("ace/mode/html");
         </script>
-
-        <label for="post">DESCRIPTION</label>
-        <textarea id="post" name="post" rows="6" cols="50">
-        Describe you image!
-        </textarea>
-        <input type="submit" value="SUBMIT">
-        <action="submit-photo.php" method="POST">
-        </form>
     </main>
 
 
