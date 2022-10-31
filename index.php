@@ -8,47 +8,43 @@
   </title>
 </head>
 
-<?php
-//TODO Clean, comment, work on photo display/functionality
-//Note: Original photo size is 1440 x 900
-?>
-
-<?php // Get all the post titles from the posts table should display images also, build db_connect.php and database (images)
-function getPostTitlesFromDatabase() { 
+<?php // Get all the post titles from the posts table should display images also
+function getPostInformationFromDatabase() { 
   include_once './includes/db_connect.php';
-  $sql = "SELECT title FROM posts";
+  $sql = "SELECT `name`, `description`, `file` FROM posts";
   $result = mysqli_query($conn, $sql);
 
-  // Get each result row as an assoc array, then add title to $postTitles
-  $postTitles = array();
+  // Get each result row as an assoc array, then add title to $postName
+  $postName = array();
+  $postDescription = array();
+  $postFile = array();
   while ($row = mysqli_fetch_assoc($result)) {
-    array_push($postTitles, $row['title']);
-    } return $postTitles;
+    array_push($postName, $postDescription $row['name', 'description', 'file']);
+    } return $postName $postDescription;
 }
 ?>
 
 <body>
-  <?php //Refactored header and navigation elements
+  <?php //Header and Navigation 
   include 'header.php';
   include 'nav.php';
   ?>
 
-    <?php //TODO getPostTitlesFromDatabase function should display images also, getPostFileFromDatabase and getPostDescriptionFromDatabase could work. Should this live outside the body or somewhere else in the page?
-        $postTitles = getPostTitlesFromDatabase();
-        foreach($postTitles as $postTitle) {
-            echo "<li><a href='upload.php?title=" . $postTitle 
-            . "' class='title'>" . $postTitle . "</a></li>";
+    <?php //TODO: Test functionality
+        $postInformation = getPostInformationFromDatabase();
+        foreach($postNames as $postName) {
+            echo "<li><a href='upload.php?name=" . $postName 
+            . "' class='name'>" . $postName . "</a></li>";
         }
     ?>
 
   <main>
     <ul>
       <?php
-      // Display post titles, TODO display post images and post description too
-      $postTitles = getPostTitlesFromDatabase();
-      foreach ($postTitles as $postTitle) {
-        echo "<li><a href='upload.php?title=" . $postTitle . "'>" . $postTitle .
-          "</a></li>";
+      // Display post titles, descriptions and images, TODO: Display post images and test functionality
+      $postInformation = getPostInformationFromDatabase();
+      foreach ($postNames as $postName, $postDescriptions as $postDescription) {
+        echo "<li><a href='upload.php?Name=" . $postName . "'>" . $postName ."</a></li>";
       }
       ?>
 

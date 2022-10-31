@@ -41,11 +41,14 @@
         <p>DESCRIPTION</p>
         <textarea type="text" id="description" name="description" placeholder="Describe your Image!" rows="6" cols="50"></textarea>
 
-        <form action="/upload.php" method="POST" enctype="multipart/form-data">
+        <form action="/submit-photo.php" method="POST" enctype="multipart/form-data">
             <input type="file" name="file">
+        </form>
 
-        <button type="submit" name="SUBMIT">SUBMIT</button>
+        <button type="submit" name="submit">SUBMIT</button>
         <action="submit-photo.php" method="POST">
+
+
 
 
         <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
