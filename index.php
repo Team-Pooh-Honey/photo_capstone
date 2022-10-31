@@ -19,8 +19,8 @@ function getPostInformationFromDatabase() {
   $postDescription = array();
   $postFile = array();
   while ($row = mysqli_fetch_assoc($result)) {
-    array_push($postName, $postDescription $row['name', 'description', 'file']);
-    } return $postName $postDescription;
+    array_push($postName ['name']);
+    } return $postName;
 }
 ?>
 
@@ -35,9 +35,7 @@ function getPostInformationFromDatabase() {
       <?php
       // Display post titles, descriptions and images, TODO: Test echo function
       $postInformation = getPostInformationFromDatabase();
-      foreach ($postNames as $postName);
-              ($postDescriptions as $postDescription);
-              ($postFiles as $postFile) {
+      foreach ($postNames as $postName); {
               echo "<li><a href='upload.php?Name=" . $postName . "' class='name'>" . $postName ."</a></li>";
               }
       ?>
