@@ -30,22 +30,16 @@ function getPostInformationFromDatabase() {
   include 'nav.php';
   ?>
 
-    <?php //TODO: Test functionality
-        $postInformation = getPostInformationFromDatabase();
-        foreach($postNames as $postName) {
-            echo "<li><a href='upload.php?name=" . $postName 
-            . "' class='name'>" . $postName . "</a></li>";
-        }
-    ?>
-
   <main>
     <ul>
       <?php
-      // Display post titles, descriptions and images, TODO: Display post images and test functionality
+      // Display post titles, descriptions and images, TODO: Test echo function
       $postInformation = getPostInformationFromDatabase();
-      foreach ($postNames as $postName, $postDescriptions as $postDescription) {
-        echo "<li><a href='upload.php?Name=" . $postName . "'>" . $postName ."</a></li>";
-      }
+      foreach ($postNames as $postName);
+              ($postDescriptions as $postDescription);
+              ($postFiles as $postFile) {
+              echo "<li><a href='upload.php?Name=" . $postName . "' class='name'>" . $postName ."</a></li>";
+              }
       ?>
 
     </ul>
